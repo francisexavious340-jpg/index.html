@@ -1,0 +1,307 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>St. Benedict Website</title>
+  <style>
+    
+    /* GLOBAL STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background: #e6e6eb;
+      color: hwb(252 9% 89%);
+      line-height: 1.6;
+    }
+
+    /* HEADER & NAVBAR */
+    header {
+      background: #003366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(hwb(241 1% 75% / 0.4), rgba(216, 4, 4, 0.4),pink),
+        url('https://via.placeholder.com/1200x400') no-repeat center/cover;
+      color: hsl(261, 90%, 49%);
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .hero h1 {
+      font-size: 5.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 4.2rem;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #eaecee;
+      margin-bottom: 15px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px hsla(0, 90%, 42%, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* CONTACT FORM */
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #030572;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(240, 33, 6, 0.1)
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #e7eaee;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffcc00;
+      color: #000000;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background:#da3333;
+      color: white;
+      margin-top: 30px;
+    }
+
+    /* RESPONSIVE NAVBAR (MOBILE) */
+   <nav>
+  <div class="logo">St. Benedict/div>
+
+  <!-- Hamburger icon -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Menu links -->
+  <ul id="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#landing">Landing</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+/* Hamburger menu */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    width: 100%;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+    }
+    .calligraphy {font-family: "Brush script MT", cursive;
+  font-size: 36px;
+color: darkblue;
+}
+    
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\log.PNG" alt="School Logo"width="100"height="150">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#landing">Landing</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero">
+      <h1 style="
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6b6b, #f8e71c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+">
+  Welcome to; <em><b>KIBUUKA MEMORIAL PREPARATORY SCHOOL KIWAAWO</b></em></h1>
+      <p class="calligraphy">"Struggle to the Highest"</p>
+        
+    </div>
+  </section>
+
+  <!-- LANDING -->
+  <section id="landing">
+     <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\p.jpg" alt="School Event 1"width="100"height="150">
+      <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\e.jpg" alt="School Event 2"width="100"height="150">
+    <video width="600"height="360"controls autoplay loop muted>
+        <source src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\s.mp4" type="video/mp4">
+    </video>
+    
+      
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Our mission as ST.Benedicct K.M.P.S is to produce the holistic children. well behaved, God fearing and academically upright ready to render services tp the community</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\p5.png" alt="School Event 1"width="100"height="150">
+      <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\add.jpg" alt="School Event 2"width="100"height="150">
+      <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\adm.jpg" alt="School Event 3"width="100"height="150">
+    <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\directors.JPG" alt="School Event 1"width="100"height="150">
+      <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\staff.JPG" alt="School Event 2"width="100"height="150">
+      <img src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\sports.JPG" alt="School Event 3"width="100"height="150">
+    <video width="600"height="360"controls autoplay loop muted>
+      
+      <source src="C:\Users\DELL LATITUDE 7280\Desktop\st ben\p4.mp4" type="video/mp4">
+    </video>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 St. Benedict. All rights reserved.</p>
+  </footer>
+  <script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+  }
+</script>
+
+
+</body>
+</html>
